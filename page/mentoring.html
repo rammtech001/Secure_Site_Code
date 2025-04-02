@@ -54,7 +54,7 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter username (e.g., 222u1a3701)" required>
+                <input type="text" id="username" name="username" placeholder="Enter username (e.g., 212u1a3371)" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -73,14 +73,19 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Sample username and password validation
-            var validUsernames = [
-                '222u1a3701', '222u1a3702', '222u1a3703', '222u1a3704', '222u1a3705',
-                '222u1a3706', '222u1a3707', '222u1a3708', '222u1a3709', '222u1a3710', '222u1a3711', '222u1a3712', '222u1a3713', '222u1a3714', '222u1a3715'
-                '232u5a3701', '232u5a3702', '232u5a3703', '232u5a3704'
-            ];
+            // Validate if username is in the range 212u1a3371 - 212u1a3395 or 222u5a3305 - 222u5a3307
+            var isValidUsername = false;
 
-            if (validUsernames.includes(username) && password === 'password') {
+            // Check for 212u1a3371 to 212u1a3395
+            if (/^212u1a33(71|7[2-9]|[8-9][0-9]|3[0-5][0-9]|339[1-5])$/.test(username)) {
+                isValidUsername = true;
+            }
+            // Check for 222u5a3305 to 222u5a3307
+            else if (/^222u5a33(05|06|07)$/.test(username)) {
+                isValidUsername = true;
+            }
+
+            if (isValidUsername && password === 'password') {
                 alert('Login successful!');
                 // Redirect to materials.html upon successful login
                 window.location.href = 'page/materials.html';
