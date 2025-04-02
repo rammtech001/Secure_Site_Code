@@ -54,7 +54,7 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter username (e.g., 212u1a3371)" required>
+                <input type="text" id="username" name="username" placeholder="Enter username" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -73,21 +73,10 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Validate if username is in the range 212u1a3371 - 212u1a3395 or 222u5a3305 - 222u5a3307
-            var isValidUsername = false;
-
-            // Check for 212u1a3371 to 212u1a3395
-            if (/^212u1a33(71|7[2-9]|[8-9][0-9]|3[0-5][0-9]|339[1-5])$/.test(username)) {
-                isValidUsername = true;
-            }
-            // Check for 222u5a3305 to 222u5a3307
-            else if (/^222u5a33(05|06|07)$/.test(username)) {
-                isValidUsername = true;
-            }
-
-            if (isValidUsername && password === 'password') {
+            // Check if username is "admin" and password is "password"
+            if (username === 'admin' && password === 'password') {
                 alert('Login successful!');
-                // Redirect to materials.html upon successful login
+                // Redirect to mentees.html upon successful login
                 window.location.href = 'mentees.html';
             } else {
                 alert('Invalid username or password.');
