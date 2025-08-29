@@ -73,15 +73,15 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Validate if username is in the range 232u1a3301 - 232u1a3366 or 232u1a3701
+            // Validate if username is in the range 232u1a3301 - 232u1a3366 or 232u5a3501
             var isValidUsername = false;
 
             // Check for 222u1a3701 to 222u1a3766
-            if (/^222u1a37(0[1-9]|[1-6][0-9]|70[1-6])$/.test(username)) {
+            if (/^232u1a33(0[1-9]|[1-6][0-9]|70[1-6])$/.test(username)) {
                 isValidUsername = true;
             }
             // Check for 232u5a3701 to 232u5a3704
-            else if (/^232u5a37(0[1-4])$/.test(username)) {
+            else if (/^232u5a33(0[1-4])$/.test(username)) {
                 isValidUsername = true;
             }
 
@@ -97,5 +97,6 @@
 
 </body>
 </html>
+
 
 
