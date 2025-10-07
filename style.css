@@ -1,155 +1,334 @@
+/* Enhanced CSS for Professional Academic Website */
+:root {
+  --primary-color: #2c3e50;
+  --secondary-color: #3498db;
+  --accent-color: #e74c3c;
+  --light-color: #ecf0f1;
+  --dark-color: #2c3e50;
+  --success-color: #27ae60;
+  --text-color: #333;
+  --text-light: #7f8c8d;
+  --shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  --transition: all 0.3s ease;
+}
+
 * {
-    box-sizing:border-box;
-    text-decoration: none;
+  box-sizing: border-box;
+  text-decoration: none;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  margin: 0;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.6;
+  color: var(--text-color);
+  background-color: #f9f9f9;
+}
+
+.container {
+  padding: 80px 64px;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.column-66 {
+  float: left;
+  width: 66.66666%;
+  padding: 20px;
+}
+
+.column-33 {
+  float: left;
+  width: 33.33333%;
+  padding: 20px;
+}
+
+.large-font {
+  font-size: 48px;
+}
+
+.xlarge-font {
+  font-size: 64px;
+}
+
+/* Header Section */
+div[style*="text-align:center"] {
+  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
+  color: white;
+  padding: 40px 20px;
+  margin-bottom: 30px;
+  box-shadow: var(--shadow);
+}
+
+div[style*="text-align:center"] h2 {
+  font-size: 2.5rem;
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+
+div[style*="text-align:center"] p {
+  font-size: 1.2rem;
+  opacity: 0.9;
+}
+
+/* Main Content Section */
+.container {
+  background-color: white;
+  border-radius: 10px;
+  box-shadow: var(--shadow);
+  margin: 30px auto;
+  max-width: 1200px;
+}
+
+.container h1 {
+  margin-bottom: 15px;
+  color: var(--primary-color);
+  font-weight: 600;
+}
+
+.container h1:first-child {
+  color: var(--accent-color);
+  font-size: 2.2rem;
+}
+
+.container p {
+  color: var(--text-light);
+  margin: 20px 0;
+  font-size: 1.1rem;
+}
+
+.container span {
+  color: var(--secondary-color);
+  font-weight: 600;
+}
+
+/* Buttons */
+.btns {
+  color: white;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: flex-start;
+  margin-top: 30px;
+}
+
+.button {
+  border: none;
+  color: white;
+  padding: 14px 28px;
+  margin: 8px 8px 8px 0;
+  font-size: 16px;
+  cursor: pointer;
+  background-color: var(--secondary-color);
+  border-radius: 5px;
+  font-weight: 600;
+  transition: var(--transition);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.button:hover {
+  background-color: var(--primary-color);
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+/* Image Styling */
+.column-33 img {
+  display: block;
+  height: auto;
+  max-width: 100%;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+  transition: var(--transition);
+}
+
+.column-33 img:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 25px rgba(0, 0, 0, 0.15);
+}
+
+/* Course Cards Section */
+.cont {
+  background-color: #f8f9fa;
+  padding: 60px 20px;
+}
+
+.hd h3 {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 40px;
+  position: relative;
+  padding-bottom: 15px;
+}
+
+.hd h3:after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 3px;
+  background: var(--secondary-color);
+}
+
+.row .box {
+  width: 100%;
+  height: max-content;
+  margin: auto;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 4%;
+  overflow-wrap: break-word;
+  justify-content: center;
+}
+
+.box .b {
+  width: 280px;
+  height: 450px;
+  border-radius: 10px;
+  margin: 15px;
+  overflow: hidden;
+  box-shadow: var(--shadow);
+  transition: var(--transition);
+  background: white;
+}
+
+.box .b:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+}
+
+.b .top {
+  width: 100%;
+  height: 40%;
+  background: linear-gradient(135deg, var(--secondary-color), var(--primary-color));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.b .top img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: var(--transition);
+}
+
+.b:hover .top img {
+  transform: scale(1.05);
+}
+
+.b .btm {
+  text-align: center;
+  padding: 25px 15px;
+}
+
+.b .btm p {
+  margin: 8px 0;
+  color: var(--text-color);
+  font-size: 1rem;
+}
+
+.b .btm p:first-child {
+  font-weight: 700;
+  color: var(--primary-color);
+  font-size: 1.2rem;
+  margin-bottom: 15px;
+}
+
+.b .sub button {
+  background: linear-gradient(to right, var(--secondary-color), var(--primary-color));
+  border: none;
+  width: 100%;
+  margin-top: 20px;
+  padding: 12px;
+  color: white;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.b .sub button:hover {
+  background: linear-gradient(to right, var(--primary-color), var(--secondary-color));
+  letter-spacing: 1px;
+}
+
+/* Responsive Design */
+@media screen and (max-width: 1000px) {
+  .column-66,
+  .column-33 {
+    width: 100%;
+    text-align: center;
   }
   
-  body {
-    margin: 0;
-    font-family: Arial, Helvetica, sans-serif;
+  img {
+    margin: auto;
+    max-width: 80%;
   }
   
   .container {
-    padding: 64px;
+    padding: 40px 20px;
   }
   
-  .row:after {
-    content: "";
-    display: table;
-    clear: both
+  .btns {
+    justify-content: center;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .cont .row .box .b {
+    margin-bottom: 30px;
+    width: 100%;
+    max-width: 350px;
   }
   
-  .column-66 {
-    float: left;
-    width: 66.66666%;
-    padding: 20px;
+  div[style*="text-align:center"] h2 {
+    font-size: 2rem;
   }
   
-  .column-33 {
-    float: left;
-    width: 33.33333%;
-    padding: 20px;
+  .container h1:first-child {
+    font-size: 1.8rem;
   }
   
-  .large-font {
-    font-size: 48px;
-  }
-  
-  .xlarge-font {
-    font-size: 64px
-  }
-  
-  .btns{
-    color: white;
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;align-items: center;
-    justify-content: space-around;
-  }
   .button {
-    border: none;
-    color: white;
-    padding: 14px 28px;
-    margin: 8px;
-    font-size: 16px;
-    cursor: pointer;
-    background-color: #04AA6D;
-  }
-  .btns botton a{
-    color: white;
+    width: 100%;
+    margin: 8px 0;
   }
   
-  .row .box{
-  
-      width: 100vw;
-      height: max-content;
-      margin: auto;
-      display: flex;
-      flex-wrap: wrap;
-      margin-bottom: 4%;
-      overflow-wrap: break-word;
-      
-    }
-    .box .b{
-      width: 300px;
-      height: 450px;
-      border: 1px solid black;
-      margin: auto;
-    }
-  
-  .b .top{
-      width: 100%;
-      height: 40%;
-      background-color: blueviolet;
+  .btns {
+    flex-direction: column;
   }
-  
-  .b .btm{
-      text-align: center;
-      padding-top: 20px;
-  }
-  
-  .b .sub button{
-      background-color: skyblue;
-      border: none;
-      width: 100%;
-      margin-top: 3.7vh;
-      padding: 10px;
-  }
-  
-  .b .sub button:hover{
-    background-color: blueviolet;
-    color: white;
-    font-weight: bold;
-    transition: 1s;
-  }
-  img {
-    display: block;
-    height: auto;
-    max-width: 100%;
-  }
+}
 
-  .const .row .column-33 {
-    margin: 2% 4%;
-  }
-  
-  @media screen and (max-width: 1000px) {
-    .column-66,
-    .column-33 {
-      width: 100%;
-      text-align: center;
-    }
-    img {
-      margin: auto;
-    }
-    .container .column-33 h1{
-        padding: 0px;
-    }
-    .container .column-66{
-        width: 100%;
-        padding: 0;
-    }
-  }
+/* Additional Professional Touches */
+.container .column-66 h1 {
+  position: relative;
+  padding-left: 20px;
+}
 
+.container .column-66 h1:before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 5px;
+  background: var(--secondary-color);
+  border-radius: 5px;
+}
 
-@media screen and (max-width: 800px){
-    .cont .row .box .b{
-        margin-bottom: 10px;
-    }
-    .cont .row .box .b .sub button{  
-        margin-top: 7%;
-    }
-
-    .const {
-        overflow: auto;
-    }
-    .const .row .btn{
-        position: relative;
-        left: 20px;
-        bottom: 20px;
-    }
-    .const .row .column-33{
-        margin: auto;
-    }
-    .const .row .btn button{
-        margin: 10px;
-    }
+/* Focus states for accessibility */
+button:focus,
+a:focus {
+  outline: 2px solid var(--secondary-color);
+  outline-offset: 2px;
 }
