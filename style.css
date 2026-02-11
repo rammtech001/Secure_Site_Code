@@ -45,12 +45,12 @@ body {
 
 .column-33 {
   float: left;
-  width: 100.33333%;
+  width: 33.33333%;
   padding: 20px;
 }
 
 .large-font {
-  font-size: 48px;
+  font-size: 100px;
 }
 
 .xlarge-font {
