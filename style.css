@@ -64,15 +64,7 @@ div[style*="text-align:center"] {
   padding: 40px 20px;
   margin-bottom: 30px;
   box-shadow: var(--shadow);
-  @media (min-width: 600px) {
-  .header1 .logo a, .header1 .logo img {
-    background: url(BG.jpg) left center no-repeat;
-    width: 220px;
-    height: 75px;
-  }
 }
-}
-
 div[style*="text-align:center"] h2 {
   font-size: 2.5rem;
   margin-bottom: 10px;
@@ -163,6 +155,8 @@ div[style*="text-align:center"] p {
 
 /* Course Cards Section */
 .cont {
+  width:1000px;
+  height:150px;
   background-color: #f8f9fa;
   padding: 60px 20px;
 }
