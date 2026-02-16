@@ -54,7 +54,7 @@
         <form id="loginForm">
             <div class="input-group">
                 <label for="username">Username</label>
-                <input type="text" id="username" name="username" placeholder="Enter username (e.g., 25241a3301)" required>
+                <input type="text" id="username" name="username" placeholder="Enter username (e.g., 25f11a05m3)" required>
             </div>
             <div class="input-group">
                 <label for="password">Password</label>
@@ -73,15 +73,15 @@
             var username = document.getElementById('username').value;
             var password = document.getElementById('password').value;
 
-            // Validate if username is in the range 25241a3301 - 25241a3370 or 25245a3301
+            // Validate if username is in the range 25f11a05m3 - 25241a3370 or 25245a3301
             var isValidUsername = false;
 
-            // Check for 25241a3301 to 25241a3370
-            if (/^25241a33(0[1-9]|[1-6][0-9]|70[1-6])$/.test(username)) {
+            // Check for 25f11a05m3 to 25241a3370
+            if (/^25f11a05(0[1-9]|[1-6][0-9]|70[1-6])$/.test(username)) {
                 isValidUsername = true;
             }
-            // Check for 25241a3301 to 25241a3370
-            else if (/^25241a3301(0[1-4])$/.test(username)) {
+            // Check for 25f11a05m3 to 25241a3370
+            else if (/^25f11a05m3(0[1-4])$/.test(username)) {
                 isValidUsername = true;
             }
 
@@ -97,6 +97,7 @@
 
 </body>
 </html>
+
 
 
 
